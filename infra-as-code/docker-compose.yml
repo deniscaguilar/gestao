@@ -1,0 +1,19 @@
+version: "3.5"
+services:
+  docker-mysql:
+    image: mysql:latest
+    container_name: docker-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=dbGestao
+      - MYSQL_USER=user_dca
+      - MYSQL_PASSWORD=pwd_dca
+    healthcheck:
+      interval: 2s
+      retries: 10
+      test: "/usr/bin/mysql --user=root --password=root--execute \"SHOW DATABASES;\""
+      timeout: 20s
+    ports:
+      - "3306:3306"
+    network_mode: "bridge"
+    restart: always
