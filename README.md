@@ -76,8 +76,11 @@ $ entrar na raiz-do-projeto/infra-as-code (cd gestao/infra-as-code/)
   Senha: pwd_dca
 
 * Para Iniciar Aplicação: Esse step deve ser feito após a infraestrutura já toda disponivel pois dependemos do MySQL
+
   $ bash start-application.sh -> esse é o processo para rodar no mac.
+
   $ sh start-application.sh -> esse é o processo para rodar no linux.
+  
   Esse arquivo irá rodar o maven clean install e rodar os testes e após finalizar irá roda o java -jar para subir a
   aplicação
 
